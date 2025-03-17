@@ -22,7 +22,7 @@ const Step3 = ({ data, finsh }) => {
     return(
         <div className="name">
             {data.name}
-            {items.map(item => <Step3Item key={item.set} data={item} finsh={finsh}/>)}
+            {items.map(item => <Step3Item key={item.set} data={item} finsh={finsh[item.set]}/>)}
             <div className="button-clear">
                 <button onClick={handleClickNavigate}>세트 완료</button>
             </div>

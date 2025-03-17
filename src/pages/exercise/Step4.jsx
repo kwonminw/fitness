@@ -4,7 +4,7 @@ const Step4 = () => {
     const navigate = useNavigate();
 
     const handleClickNavigate = () => {
-        navigate('/exercise/step1')
+        navigate('/')
     };
 
     return(
