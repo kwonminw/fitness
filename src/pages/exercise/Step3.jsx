@@ -6,7 +6,7 @@ const Step3 = ({ data, finsh }) => {
     const navigate = useNavigate();
 
     const handleClickNavigate = () => {
-        navigate('/exercise/step1')
+        navigate('/exercise/step4')
     };
 
     let items = [];
@@ -22,7 +22,7 @@ const Step3 = ({ data, finsh }) => {
     return(
         <div className="name">
             {data.name}
-            {items.map(item => <Step3Item key={item.set} data={item} finsh={finsh[item.set]}/>)}
+            {items.map(item => <Step3Item key={item.set} data={item} finsh={finsh}/>)}
             <div className="button-clear">
                 <button onClick={handleClickNavigate}>세트 완료</button>
             </div>

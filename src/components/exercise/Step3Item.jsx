@@ -14,7 +14,6 @@ const Step3Item = ({ data, finsh }) => {
             {data.number}회
             <input type="checkbox" onClick={handleClickNavigate} checked={finsh} />
         </div>
-
     )
 };
 
