@@ -5,8 +5,8 @@ import {Step1, Step2, Step3, Step4, Intervel} from './index'
 const Eexercise = () => {
     const [data, setData] = useState({});
     const [finsh, setFinsh] = useState({});
-    
-    return(
+
+    return (
         <Routes>
             <Route path='step1' element={<Step1 setData={setData}/>} />
             <Route path='step2' element={<Step2 data={data}/>} />
