@@ -1,35 +1,36 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
-const Intervel = ({ data,setFinsh }) => {
-    const [timer, setTimer] = useState(data.time);
+const Intervel = ({ data, setFinsh }) => {
     const navigate = useNavigate();
     const location = useLocation();
 
+    const [timer, setTimer] = useState(data.time);
     const { setIndex } = location.state
+
+    // 타이머 감소를 위한 useEffect
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setTimer((prev) => (prev > 0 ? prev - 1 : 0));
+        }, 1000);
+
+        return () => clearInterval(intervalId);
+    }, []);
+
+    // 타이머가 0이 되었을 때 완료 상태 업데이트 및 페이지 이동
+    useEffect(() => {
+        if (timer === 0) {
+            setFinsh(prev => ({
+                ...prev,
+                [setIndex]: true,
+            }));
+            navigate("/exercise/step3");
+        }
+    }, [timer, setFinsh, navigate, setIndex]);
+
 
     const minute = Math.floor(timer / 60)
     const second = timer % 60;
-
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-            setTimer(prev => {
-                if (prev <= 1) {
-                    clearInterval(intervalId);  
-                    setFinsh(prev => ({
-                        ...prev,
-                        [setIndex] : true
-                    }))                  
-                    navigate('/exercise/step3')
-                    return 0;
-                }
-                return prev - 1;
-            });
-        }, 1000);
-
-        // 컴포넌트 언마운트시 interval 정리
-        return () => clearInterval(intervalId);
-    }, [navigate, setIndex, setFinsh]);
 
     return (
         <div>
