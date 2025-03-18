@@ -1,1 +1,13 @@
 /* Step4.css */
+
+.Step4 h2 {
+    padding: 20vh 20px 20vh 20px;
+    text-align: center;
+    font-size: 32px;
+    line-height: 1;
+}
+
+.Step4 .textbutton {
+    width: 60%;
+    margin: 0 auto;
+}

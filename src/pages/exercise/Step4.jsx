@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import './Step4.css';
 
 const Step4 = () => {
     const navigate = useNavigate();
@@ -7,10 +8,10 @@ const Step4 = () => {
         navigate('/')
     };
 
-    return(
-        <div>
-            운동을 완료했습니다 !<br />
-        <button onClick={handleClickNavigate}>홈으로 돌아가기</button>
+    return (
+        <div className="Step4">
+            <h2>운동을 완료했습니다 !</h2>
+            <div className="textbutton"><button onClick={handleClickNavigate}>홈으로 돌아가기</button></div>
         </div>
     )
 };

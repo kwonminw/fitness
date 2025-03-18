@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import './Step1.css';
 
-const Step1 = ({setData}) => {
+const Step1 = ({ setData }) => {
 
     const navigate = useNavigate();
 
@@ -44,11 +44,12 @@ const Step1 = ({setData}) => {
         navigate('/exercise/step2');
     };
 
-    return(
-        <div className="text">
+    return (
+        <div className="Step1">
+            <h2 className="pageTitle">운동 설정하기</h2>
             <div className="text-inner">
                 <div className="name">
-                    <input 
+                    <input
                         type="text"
                         placeholder="운동이름을 작성해주세요"
                         value={name}
@@ -56,7 +57,7 @@ const Step1 = ({setData}) => {
                     />
                 </div>
                 <div className="set">
-                    <input 
+                    <input
                         type="text"
                         placeholder="세트수를 입력해주세요"
                         value={set}
@@ -64,7 +65,7 @@ const Step1 = ({setData}) => {
                     />
                 </div>
                 <div className="Number">
-                    <input 
+                    <input
                         type="text"
                         placeholder="세트마다 운동 횟수를 입력해주세요"
                         value={number}
@@ -72,7 +73,7 @@ const Step1 = ({setData}) => {
                     />
                 </div>
                 <div className="Weight">
-                    <input 
+                    <input
                         type="text"
                         placeholder="중량 입력을 해주세요"
                         value={weight}
@@ -80,15 +81,15 @@ const Step1 = ({setData}) => {
                     />
                 </div>
                 <div className="time">
-                    <input 
+                    <input
                         type="text"
-                        placeholder="인터벌시간"
+                        placeholder="인터벌시간을 해주세요"
                         value={time}
                         onChange={handleChangeTime}
                     />
                 </div>
             </div>
-            <button className="textbutton" onClick={handleClickNavigate}>운동 설정 완료</button>
+            <div className="textbutton"><button onClick={handleClickNavigate}>운동 설정</button></div>
         </div>
     )
 }

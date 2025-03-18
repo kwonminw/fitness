@@ -9,11 +9,11 @@ const Step3Item = ({ data, finsh }) => {
     }
 
     return (
-        <div className="all">
-            {data.set}세트
-            {data.weight}kg
-            {data.number}회
-            <input type="checkbox" onClick={handleClickNavigate} readOnly checked={finsh} />
+        <div className="Step3Item">
+            <p>{data.set}세트</p>
+            <p>{data.weight}kg</p>
+            <p>{data.number}회</p>
+            <p><input type="checkbox" onClick={handleClickNavigate} readOnly checked={finsh} /></p>
         </div>
     )
 };

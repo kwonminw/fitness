@@ -1,0 +1,38 @@
+/* Main.css */
+
+.Main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #09367e, #373B44);
+
+}
+
+.Main .main-inner {
+    padding-bottom: 20vh;
+}
+
+.Main .main-inner h2 {
+    margin-bottom: 15vh;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.Main .main-inner .btn {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.Main .main-inner .btn a {
+    display: block;
+    background-color: #fff;
+    text-align: center;
+    line-height: 48px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #09367e;
+}

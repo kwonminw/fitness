@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import './Intervel.css';
 
 const Intervel = ({ data, setFinsh }) => {
     const navigate = useNavigate();
@@ -33,8 +34,8 @@ const Intervel = ({ data, setFinsh }) => {
     const second = timer % 60;
 
     return (
-        <div>
-            {minute <= 0 ? '00' : minute}분{second}초
+        <div className="Intervel">
+            {minute <= 0 ? '00' : minute}분 {second}초
         </div>
     )
 }
